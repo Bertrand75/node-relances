@@ -55,5 +55,5 @@ app.use("/api/article", RouteArticle);
 
 // --------------  SERVEUR --------------
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`server running on port ${PORT}`));
+const port = process.env.PORT || 5000;
+app.listen(port, () => console.log(`server running on port ${port}`));
