@@ -35,7 +35,7 @@ mongoose
 
 // --------------  ROUTES --------------
 
-const RouteUser = require("./Routes/RouteUser");
+const RouteUser = require("./routes/RouteUser");
 const RouteJournalist = require("./Routes/RouteJournalist");
 const RouteMission = require("./Routes/RouteMission");
 const RouteNewspaper = require("./Routes/RouteNewspaper");
