@@ -36,13 +36,13 @@ mongoose
 // --------------  ROUTES --------------
 
 const RouteUser = require("./routes/RouteUser");
-const RouteJournalist = require("./Routes/RouteJournalist");
-const RouteMission = require("./Routes/RouteMission");
-const RouteNewspaper = require("./Routes/RouteNewspaper");
-const RouteRelance = require("./Routes/RouteRelance");
-const RouteTopic = require("./Routes/RouteTopic");
-const RouteClient = require("./Routes/RouteClient");
-const RouteArticle = require("./Routes/RouteArticle");
+const RouteJournalist = require("./routes/RouteJournalist");
+const RouteMission = require("./routes/RouteMission");
+const RouteNewspaper = require("./routes/RouteNewspaper");
+const RouteRelance = require("./routes/RouteRelance");
+const RouteTopic = require("./routes/RouteTopic");
+const RouteClient = require("./routes/RouteClient");
+const RouteArticle = require("./routes/RouteArticle");
 
 app.use("/api/user", RouteUser);
 app.use("/api/journalist", RouteJournalist);
