@@ -124,7 +124,7 @@ exports.updateUser = async (req, res) => {
     if (user) {
       res.json({
         item: user,
-        message: `L'utilisateur "${user.prenom} ${user.nom}" a bien été mis à jour`,
+        message: `L'utilisateur "${user.pseudo}" a bien été mis à jour`,
       });
     } else {
       res.status(400).json({ message: "L'id de l'utilisateur n'existe pas" });
