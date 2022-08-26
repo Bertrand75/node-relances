@@ -39,7 +39,7 @@ const userSchema = new mongoose.Schema(
       lowercase: true,
       trim: true,
       minlength: 5,
-      maxlength: 80,
+      maxlength: 100,
       validate: [isEmail],
     },
     password: {

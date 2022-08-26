@@ -5,6 +5,9 @@ const bcrypt = require("bcrypt");
 // POST ( inscription d'un utilisateur )
 exports.signup = async (req, res) => {
   try {
+    console.log(req.body.role);
+    req.body.role = "NORMAL"; // par sécurité
+
     const user = await User.create(req.body);
     let token = jwt.sign({ id: user._id }, process.env.PRIVATE_KEY, {
       expiresIn: 1000 * 60 * 60 * 5,
@@ -85,7 +88,7 @@ exports.getUser = async (req, res) => {
 // DELETE (supprimer un utilisateur avec son id)
 exports.deleteUser = async (req, res) => {
   try {
-    let { id: idAdmin } = req.payload;
+    // let { id: idAdmin } = req.payload;
     let { id: idUser } = req.params;
     let user = await User.findById(idUser);
     if (user) {
@@ -116,6 +119,11 @@ exports.deleteUser = async (req, res) => {
 exports.updateUser = async (req, res) => {
   try {
     let { id } = req.params;
+
+    if (req.payload.role !== "ADMIN") {
+      // Vérification supplémentaire visant à empecher un utilisateur normal de modifier son status
+      req.body.role = "NORMAL";
+    }
     let user = await User.findByIdAndUpdate(
       id,
       { $set: req.body },

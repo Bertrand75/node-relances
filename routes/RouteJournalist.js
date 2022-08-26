@@ -7,7 +7,7 @@ const controllerJournalist = require("../controllers/JournalistController");
 
 // Création  d'un journaliste
 router.post("/", auth, multer, controllerJournalist.createJournalist);
-// Récupération de touts les journalistes
+// Récupération de tous les journalistes
 router.get("/", auth, controllerJournalist.getJournalists);
 // Récupération d'un journaliste sont le prenom et le nom sont spécifiés
 router.get(

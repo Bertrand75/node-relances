@@ -116,7 +116,7 @@ exports.getJournalistNewspapers = async (req, res) => {
   }
 };
 
-// GET (récupérer tous les journalistes de l'utilisateur loggé)
+// GET (récupérer tous les journalistes de l'utilisateur logué)
 exports.getJournalists = async (req, res) => {
   try {
     let idUser = req.payload.id;
